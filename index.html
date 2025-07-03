@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Nina Carducci">
-    <title>Nina Carducci</title>
-    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v19/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZFhiI2B.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com/s/spectral/v14/rnCu-xNNww_2s0amA9M8qtHEWfqFXUIJ.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com/s/spectral/v14/rnCu-xNNww_2s0amA9M8qt3AWfqFXUIJ.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Portfolio de Nina Carducci">
+	<title>Nina Carducci</title>
     <meta charset="UTF-8">
+	<link rel="preload" href="https://fonts.gstatic.com/s/inter/v19/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZFhiI2B.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="https://fonts.gstatic.com/s/spectral/v14/rnCu-xNNww_2s0amA9M8qtHEWfqFXUIJ.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="https://fonts.gstatic.com/s/spectral/v14/rnCu-xNNww_2s0amA9M8qt3AWfqFXUIJ.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
+
 </head>
 <body>
 	<nav>
@@ -49,7 +54,8 @@
 							class="d-block w-100"
 							alt="Homme d'affaire"
 							width="1600" height="740"
-							loading="eager"> 
+							loading="eager" 
+							fetchpriority="high"> 
 					</picture>
 				</div>
 				<div class="carousel-item">
@@ -93,7 +99,7 @@
 <section>
 	<div id="about" itemscope itemtype="https://schema.org/Person">
 		<div class="picture left">
-			<img src="./assets/images/nina.png" alt="Image de Nina" loading="lazy" itemprop="image">
+			<img src="./assets/images/nina.png" alt="Image de Nina" itemprop="image" loading="lazy" >
 		</div>
 		<div id="about-me">
 			<h2 class="about-me__title">A propos de moi</h2>
@@ -222,7 +228,7 @@
     </div>
 </footer>
 
-	<script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
+	<script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
 	<script src="./assets/maugallery.js" defer></script>
 	<script src="./assets/scripts.js" defer></script>
