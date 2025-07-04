@@ -8,6 +8,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
 
     <link rel="preload" href="https://fonts.gstatic.com/s/inter/v19/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZFhiI2B.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/spectral/v14/rnCu-xNNww_2s0amA9M8qtHEWfqFXUIJ.woff2" as="font" type="font/woff2" crossorigin>
@@ -16,55 +17,10 @@
     <link rel="preload" href="https://fonts.gstatic.com/s/spectral/v14/rnC_-xNNww_2s0amA9M8qt3rDu1aFXUIJ.woff2" as="font" type="font/woff2" crossorigin>
 
 
-    <style>
-        /* Styles pour body, top-header, nav, name, social-link img, carousel slide (partie visible), picture.left */
-        /* Extrait du style.css et bootstrap.min.css, minifié */
-        body { max-width: 1920px; margin: auto; }
-        * { font-family: Inter, sans-serif; font-style: normal; } /* Ajout de sans-serif en fallback */
-        .top-header { background-color: #fff; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; padding-inline: 100px; padding-block: 30px; align-items: center; }
-        .top-header .name { font-size: 26px; }
-        .nav ul { display: flex; list-style-type: none; font-size: 14px; margin-bottom: 0; }
-        .nav li { padding-inline: 10px; }
-        .nav a { text-decoration: none; color: #000; }
-        .social-link img { width: 20px; }
-        /* Styles pour le carrousel actif (première slide visible) */
-        #header .carousel.slide { position: relative; } /* Ou les styles spécifiques qui rendent le slider visible initialement */
-        #header .carousel-inner { position: relative; width: 100%; overflow: hidden; } /* Gardez ce qui est essentiel pour le layout */
-        #header .carousel-item { position: relative; display: block; } /* Initialement, la première slide est 'active' */
-        #header .carousel-item.active { display: block; } /* C'est la classe de Bootstrap qui fait apparaître la première slide */
-        #header .carousel-item img { display: block; width: 100%; }
-        /* Styles pour la section "À propos de moi" qui est juste après le header */
-        #about { display: flex; background-color: #f6d2b8; padding-inline: 100px; padding-block: 100px; position: relative; }
-        .picture.left { flex: 1; margin: 0 20px; z-index: 0; }
-        .picture.left img { width: 100%; }
-        /* Ajoutez ici les styles pour .picture.left:before si essentiel au rendu initial */
-        .picture.left:before { content: " "; background-color: #e5975f; width: 374px; height: 329px; position: absolute; bottom: 0; left: 0; z-index: -1; }
-        #about-me { flex: 2; }
-        .about-me__title { margin-top: 1em; margin-bottom: 60px; font-size: 30px; }
-        .about-me__introduction { font-family: Spectral, serif; font-weight: 800; font-style: italic; width: 60%; } /* Ajout de serif en fallback */
-        #about-me p { width: 80%; font-size: 14px; }
 
-        /* Media queries pour le CSS critique si nécessaire pour le above-the-fold */
-        @media (max-width: 1000px) {
-            #about { flex-direction: column; }
-            .picture { width: 50%; }
-            .picture.left:before { width: 100%; height: 30%; position: absolute; bottom: auto; top: 0; left: 0; z-index: -1; }
-            #about-me__title { text-align: center; margin-top: 1em; }
-        }
-        @media (max-width: 650px) {
-            .top-header { flex-direction: column; padding-inline: 0; }
-            .top-header .nav, .top-header .nav ul { width: 100%; padding: 0; }
-            .top-header .nav li { flex: 1; padding-block: 1em; text-align: center; }
-            .picture.left:before { height: 150px; }
-            #about { padding-inline: 2em; padding-block: 2em; }
-            .picture { width: 80%; }
-        }
-    </style>
 
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="./assets/style.css" media="print" onload="this.media='all'">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
     
 </head>
 <body>
@@ -92,19 +48,19 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="./assets/images/slider/webp/ryoji-iwata-wUZjnOv7t0g-unsplash-800w.webp 800w, ./assets/images/slider/webp/ryoji-iwata-wUZjnOv7t0g-unsplash-1200w.webp 1200w" type="image/webp">
-                        <source srcset="./assets/images/slider/webp/ryoji-iwata-wUZjnOv7t0g-unsplash-1600w.webp 1600w" type="image/webp">
+					<picture>
+						<source media="(max-width: 768px)" srcset="./assets/images/slider/webp/ryoji-iwata-wUZjnOv7t0g-unsplash-800w.webp 800w, ./assets/images/slider/webp/ryoji-iwata-wUZjnOv7t0g-unsplash-1200w.webp 1200w" type="image/webp">
+						<source srcset="./assets/images/slider/webp/ryoji-iwata-wUZjnOv7t0g-unsplash-1600w.webp 1600w" type="image/webp">
 
-                        <source media="(max-width: 768px)" srcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-800w.jpg 800w, ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1200w.jpg 1200w">
-                        <img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1600w.jpg"
-                            srcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1600w.jpg 1600w"
-                            class="d-block w-100"
-                            alt="Homme d'affaire"
-                            width="1600" height="740"
-                            loading="eager" 
-                            fetchpriority="high"> 
-                    </picture>
+						<source media="(max-width: 768px)" srcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-800w.jpg 800w, ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1200w.jpg 1200w">
+						<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1600w.jpg"
+							srcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1600w.jpg 1600w"
+							class="d-block w-100"
+							alt="Homme d'affaire"
+							width="1600" height="740"
+							loading="eager" 
+							fetchpriority="high"> 
+					</picture>
                 </div>
                 <div class="carousel-item">
                     <picture>
