@@ -12,9 +12,29 @@
     <link rel="preload" href="https://fonts.gstatic.com/s/inter/v19/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZFhiI2B.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/spectral/v14/rnCu-xNNww_2s0amA9M8qtHEWfqFXUIJ.woff2" as="font" type="font/woff2" crossorigin>
 
+	<style>
+		 /* Styles de base */
+        body { max-width: 1920px; margin: auto; }
+        * { font-family: Inter; font-style: normal; }
+
+		 /* Styles pour le header et la navigation */
+        .top-header { background-color:#fff; position:sticky; top:0; z-index:1000; display:flex; justify-content:space-between; padding-inline:100px; padding-block:30px; align-items:center; }
+        h1.name { font-size: 28px; }
+        .top-header .name { font-size: 26px; }
+        .nav ul { display:flex; list-style-type:none; font-size:14px; margin-bottom:0; }
+        .nav li { padding-inline:10px; }
+        .nav a { text-decoration:none; color:#000; }
+        .social-link img { width:20px; }
+
+        .d-block.w-100 { display: block; width: 100%; }
+
+		/* Les styles pour le carousel-control-next-icon et carousel-control-prev-icon */
+        .carousel-control-next-icon, .carousel-control-prev-icon { filter:invert(1) grayscale(100%) brightness(0)!important; }
+	</style>
+
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="./assets/style.css" media="print" onload="this.media='all'">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
 <body>
     <nav>
@@ -40,32 +60,84 @@
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="./assets/images/slider/webp/ryoji-iwata-wUZjnOv7t0g-unsplash-800w.webp 800w, ./assets/images/slider/webp/ryoji-iwata-wUZjnOv7t0g-unsplash-1200w.webp 1200w" type="image/webp">
-                            <source srcset="./assets/images/slider/webp/ryoji-iwata-wUZjnOv7t0g-unsplash-1600w.webp" type="image/webp">
-                            <source media="(max-width: 768px)" srcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-800w.jpg 800w, ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1200w.jpg 1200w">
-                            <img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1600w.jpg" class="d-block w-100" alt="Homme d'affaire traversant une rue" width="1600" height="740" loading="eager" fetchpriority="high">
-                        </picture>
-                    </div>
-                    <div class="carousel-item">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="./assets/images/slider/webp/nicholas-green-nPz8akkUmDI-unsplash-800w.webp 800w, ./assets/images/slider/webp/nicholas-green-nPz8akkUmDI-unsplash-1200w.webp 1200w" type="image/webp">
-                            <source srcset="./assets/images/slider/webp/nicholas-green-nPz8akkUmDI-unsplash-1600w.webp" type="image/webp">
-                            <source media="(max-width: 768px)" srcset="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash-800w.jpg 800w, ./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash-1200w.jpg 1200w">
-                            <img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash-1600w.jpg" class="d-block w-100" alt="Foule de festival de musique" width="1600" height="740" loading="lazy">
-                        </picture>
-                    </div>
-                    <div class="carousel-item">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="./assets/images/slider/webp/edward-cisneros-3_h6-1NPDGw-unsplash-800w.webp 800w, ./assets/images/slider/webp/edward-cisneros-3_h6-1NPDGw-unsplash-1200w.webp 1200w" type="image/webp">
-                            <source srcset="./assets/images/slider/webp/edward-cisneros-3_h6-1NPDGw-unsplash-1600w.webp" type="image/webp">
-                            <source media="(max-width: 768px)" srcset="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash-800w.jpg 800w, ./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash-1200w.jpg 1200w">
-                            <img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash-1600w.jpg" class="d-block w-100" alt="Photo de couple lors de fiançailles" width="1600" height="740" loading="lazy">
-                        </picture>
-                    </div>
-                </div>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<picture>
+							<source media="(min-width: 769px)" 
+									srcset="./assets/images/slider/webp/ryoji-iwata-wUZjnOv7t0g-unsplash-1600w.webp 1600w, 
+											./assets/images/slider/webp/ryoji-iwata-wUZjnOv7t0g-unsplash-1200w.webp 1200w" 
+									type="image/webp">
+							<source media="(max-width: 768px)" 
+									srcset="./assets/images/slider/webp/ryoji-iwata-wUZjnOv7t0g-unsplash-800w.webp 800w, 
+											./assets/images/slider/webp/ryoji-iwata-wUZjnOv7t0g-unsplash-1200w.webp 1200w" 
+									type="image/webp">
+
+							<source media="(min-width: 769px)" 
+									srcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1600w.jpg 1600w, 
+											./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1200w.jpg 1200w">
+							<source media="(max-width: 768px)" 
+									srcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-800w.jpg 800w, 
+											./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1200w.jpg 1200w">
+							
+							<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1600w.jpg" 
+								class="d-block w-100" 
+								alt="Homme d'affaire traversant une rue" 
+								width="1600" height="740" 
+								loading="eager" 
+								fetchpriority="high">
+						</picture>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width: 769px)" 
+									srcset="./assets/images/slider/webp/nicholas-green-nPz8akkUmDI-unsplash-1600w.webp 1600w, 
+											./assets/images/slider/webp/nicholas-green-nPz8akkUmDI-unsplash-1200w.webp 1200w" 
+									type="image/webp">
+							<source media="(max-width: 768px)" 
+									srcset="./assets/images/slider/webp/nicholas-green-nPz8akkUmDI-unsplash-800w.webp 800w, 
+											./assets/images/slider/webp/nicholas-green-nPz8akkUmDI-unsplash-1200w.webp 1200w" 
+									type="image/webp">
+
+							<source media="(min-width: 769px)" 
+									srcset="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash-1600w.jpg 1600w, 
+											./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash-1200w.jpg 1200w">
+							<source media="(max-width: 768px)" 
+									srcset="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash-800w.jpg 800w, 
+											./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash-1200w.jpg 1200w">
+							
+							<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash-1600w.jpg" 
+								class="d-block w-100" 
+								alt="Foule de festival de musique" 
+								width="1600" height="740" 
+								loading="lazy">
+						</picture>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width: 769px)" 
+									srcset="./assets/images/slider/webp/edward-cisneros-3_h6-1NPDGw-unsplash-1600w.webp 1600w, 
+											./assets/images/slider/webp/edward-cisneros-3_h6-1NPDGw-unsplash-1200w.webp 1200w" 
+									type="image/webp">
+							<source media="(max-width: 768px)" 
+									srcset="./assets/images/slider/webp/edward-cisneros-3_h6-1NPDGw-unsplash-800w.webp 800w, 
+											./assets/images/slider/webp/edward-cisneros-3_h6-1NPDGw-unsplash-1200w.webp 1200w" 
+									type="image/webp">
+
+							<source media="(min-width: 769px)" 
+									srcset="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash-1600w.jpg 1600w, 
+											./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash-1200w.jpg 1200w">
+							<source media="(max-width: 768px)" 
+									srcset="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash-800w.jpg 800w, 
+											./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash-1200w.jpg 1200w">
+							
+							<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash-1600w.jpg" 
+								class="d-block w-100" 
+								alt="Photo de couple lors de fiançailles" 
+								width="1600" height="740" 
+								loading="lazy">
+						</picture>
+					</div>
+				</div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" aria-label="Précédent">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </button>
@@ -190,7 +262,13 @@
                     </form>
                 </div>
                 <div class="picture right">
-                    <img src="./assets/images/camera.png" alt="Illustration d'une caméra" loading="lazy">
+				<picture>
+                    <source media="(max-width: 768px)" srcset="./assets/images/camera/webp/camera-800w.webp 800w, ./assets/images/camera/webp/camera-1200w.webp 1200w" type="image/webp">
+                    <source srcset="./assets/images/camera/webp/camera-1600w.webp" type="image/webp">
+                    <source media="(max-width: 768px)" srcset="./assets/images/camera/camera-800w.png 800w, ./assets/images/camera/camera-1200w.png 1200w">
+                    <source srcset="./assets/images/camera/camera-1600w.png">
+                    <img src="./assets/images/camera/camera-1600w.png" class="d-block w-100" alt="Illustration d'une caméra" width="1600" height="300" loading="lazy">
+                </picture>
                 </div>
                 <div class="contact-info">
                     <p><strong>Adresse :</strong> <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
