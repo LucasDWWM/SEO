@@ -8,6 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     
     <link rel="preload" href="https://fonts.gstatic.com/s/inter/v19/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZFhiI2B.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/spectral/v14/rnCu-xNNww_2s0amA9M8qtHEWfqFXUIJ.woff2" as="font" type="font/woff2" crossorigin>
@@ -54,7 +55,7 @@
 
     <header>
         <div id="header">
-            <div id="carouselExampleIndicators" class="carousel slide carousel-dark" data-bs-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-dark" data-bs-ride="carousel" role="region" aria-label="Diaporama d'exemples de photos">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -147,8 +148,8 @@
             </div>
         </div>
     </header>
-
-    <section>
+    <main>
+            <section>
         <div id="about" itemscope itemtype="https://schema.org/Person">
             <div class="picture left">
                 <picture>
@@ -290,7 +291,7 @@
             </div>
         </div>
     </footer>
-
+    </main>
     <script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
     <script src="./assets/maugallery.js" defer></script>
