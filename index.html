@@ -23,9 +23,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <!-- Styles -->
-    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" media="print" onload="this.media='all'"> <!-- charger des feuilles de style CSS de manière asynchrone (non bloquante) -->
-    <link rel="stylesheet" href="./assets/style.css" media="print" onload="this.media='all'">
+    <!-- Styles avec cache busting -->
+     <!-- cache busting : un paramètre ?v=20250715 est ajouté aux fichiers CSS pour forcer le navigateur à recharger uniquement quand le fichier change -->
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css?v=20250715" media="print" onload="this.media='all'"><!-- charger des feuilles de style CSS de manière asynchrone (non bloquante) -->
+    <link rel="stylesheet" href="./assets/style.css?v=20250715" media="print" onload="this.media='all'">
 	<style>
 		 /* Styles de base */
         body { max-width: 1920px; margin: auto; }
