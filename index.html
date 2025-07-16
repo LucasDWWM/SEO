@@ -29,12 +29,17 @@
     <link rel="preload" as="image" href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1600w.jpg" imagesrcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1600w.jpg 1600w, ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-800w.jpg 800w" imagesizes="100vw">
 
     <style>
-    body,
+    body {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size-adjust: 0.5;
+        line-height: 1.5;
+        font-size: 14px;
+    }
+
     .nav a,
     .top-header h1,
     .top-header .name {
-        font-family: 'Inter', sans-serif;
-        font-display: swap;
+        font: inherit;
     }
 
     header {
@@ -60,13 +65,12 @@
     }
 
     .about-me__introduction {
-        font-family: 'Spectral', serif;
+        font-family: 'Spectral', Georgia, serif;
         font-weight: 800;
         font-style: italic;
         width: 60%;
         font-size: 1.5rem;
-        font-display: swap;
-        font-size-adjust: 0.5;
+        font-size-adjust: 0.55;
     }
     </style>
 </head>
