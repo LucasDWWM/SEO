@@ -74,12 +74,14 @@
     #header {
         position: relative;
     }
-    #carouselExampleIndicators {
+#carouselExampleIndicators {
         position: relative;
         width: 100%;
         margin-bottom: 0;
         touch-action: pan-y;
         overflow: hidden;
+        aspect-ratio: 16 / 9;
+        min-height: 617px;
     }
     .carousel-inner {
         position: relative;
@@ -96,10 +98,10 @@
         transition: transform .6s ease-in-out;
     }
     .carousel-item img {
-        aspect-ratio: 1334 / 617;
         width: 100%;
         height: auto;
         display: block;
+        aspect-ratio: 1334 / 617;
     }
     .carousel-item.active {
         display: block;
