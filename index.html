@@ -15,6 +15,7 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://www.ninacarducci.fr/">
     <!-- Fonts -->
+     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
@@ -26,22 +27,193 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" media="print" onload="this.media='all'"><!-- charger des feuilles de style CSS de manière asynchrone (non bloquante) -->
     <link rel="stylesheet" href="./assets/style.css" media="print" onload="this.media='all'">
-	<style>
-		 /* Styles de base */
-        body { max-width: 1920px; margin: auto; }
-        * { font-family: Inter; font-style: normal; }
-
-		 /* Styles pour le header et la navigation */
-        .top-header { background-color:#fff; position:sticky; top:0; z-index:1000; display:flex; justify-content:space-between; padding-inline:100px; padding-block:30px; align-items:center; }
-        h1.name { font-size: 28px; }
-        .top-header .name { font-size: 26px; }
-        .nav ul { display:flex; list-style-type:none; font-size:14px; margin-bottom:0; }
-        .nav li { padding-inline:10px; }
-        .nav a { text-decoration:none; color:#000; }
-        .social-link img { width:20px; }
-
-        .d-block.w-100 { display: block; width: 100%; }
-	</style>
+<style>
+    /* Styles de base */
+    body {
+        max-width: 1920px;
+        margin: auto;
+    }
+    * {
+        font-family: Inter;
+        font-style: normal;
+    }
+    /* Styles pour le header et la navigation */
+    .top-header {
+        background-color: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 100px;
+        padding-block: 30px;
+        align-items: center;
+    }
+    h1.name {
+        font-size: 28px;
+    }
+    .top-header .name {
+        font-size: 26px;
+    }
+    .nav ul {
+        display: flex;
+        list-style-type: none;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+    .nav li {
+        padding-inline: 10px;
+    }
+    .nav a {
+        text-decoration: none;
+        color: #000;
+    }
+    .social-link img {
+        width: 20px;
+    }
+    #header {
+        position: relative;
+    }
+    #carouselExampleIndicators {
+        position: relative;
+        width: 100%;
+        margin-bottom: 0;
+        touch-action: pan-y;
+        overflow: hidden;
+    }
+    .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    .carousel-item {
+        position: relative;
+        display: none;
+        float: left;
+        width: 100%;
+        margin-right: -100%;
+        backface-visibility: hidden;
+        transition: transform .6s ease-in-out;
+    }
+    .carousel-item.active {
+        display: block;
+    }
+    .d-block.w-100 {
+        display: block;
+        width: 100%;
+    }
+    /* Styles pour la section "À propos" */
+    #about {
+        display: flex;
+        background-color: #f6d2b8;
+        padding-inline: 100px;
+        padding-block: 100px;
+        position: relative;
+    }
+    .picture.left:before {
+        content: " ";
+        background-color: #e5975f;
+        width: 374px;
+        height: 329px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .picture {
+        flex: 1;
+        margin: 0 20px;
+        z-index: 0;
+    }
+    .picture img {
+        width: 100%;
+    }
+    #about-me {
+        flex: 2;
+    }
+    .about-me__title {
+        margin-top: 1em;
+        margin-bottom: 60px;
+        font-size: 30px;
+    }
+    .about-me__introduction {
+        font-family: Spectral;
+        font-weight: 800;
+        font-style: italic;
+        width: 60%;
+    }
+    #about-me p {
+        width: 80%;
+        font-size: 14px;
+    }
+    .title {
+        text-align: center;
+        padding-block: 2em;
+    }
+    @media (max-width: 1180px) {
+        .picture {
+            flex: 2;
+        }
+        #about {
+            align-items: center;
+        }
+        .about-me__title {
+            margin-top: 0;
+            margin-bottom: 1em;
+        }
+        #about-me h6,
+        #about-me p {
+            width: 100%;
+        }
+    }
+    @media (max-width: 1000px) {
+        #about {
+            flex-direction: column;
+        }
+        .picture {
+            width: 50%;
+        }
+        .picture.left:before {
+            width: 100%;
+            height: 30%;
+            position: absolute;
+            bottom: auto;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .about-me__title {
+            text-align: center;
+            margin-top: 1em;
+        }
+    }
+    @media (max-width: 650px) {
+        .top-header {
+            flex-direction: column;
+            padding-inline: 0;
+        }
+        .top-header .nav,
+        .top-header .nav ul {
+            width: 100%;
+            padding: 0;
+        }
+        .top-header .nav li {
+            flex: 1;
+            padding-block: 1em;
+            text-align: center;
+        }
+        .picture.left:before {
+            height: 150px;
+        }
+        #about {
+            padding-inline: 2em;
+            padding-block: 2em;
+        }
+        .picture {
+            width: 80%;
+        }
+    }
+</style>
 </head>
 <body>
     <nav role="navigation">
@@ -156,7 +328,7 @@
                         <source srcset="./assets/images/nina/webp/nina-1600w.webp" type="image/webp">
                         <source media="(max-width: 768px)" srcset="./assets/images/nina/nina-800w.png 800w, ./assets/images/nina/nina-1200w.jpg 1200w">
                         <source srcset="./assets/images/nina/nina-1600w.jpg">
-                        <img src="./assets/images/nina/nina-1600w.jpg" class="d-block w-100" alt="Portrait de Nina Carducci" loading="lazy">
+                        <img src="./assets/images/nina/nina-1600w.jpg" class="d-block w-100" alt="Portrait de Nina Carducci" loading="lazy" width="540" height="540">
                     </picture>
                 </div>
                 <div id="about-me">
@@ -291,8 +463,8 @@
         </footer>
     </main>
     <script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" defer></script>
     <script src="./assets/maugallery.js" defer></script>
-    <script src="./assets/scripts.js"></script>
+    <script src="./assets/scripts.js" defer></script>
 </body>
 </html>
